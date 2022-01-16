@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../sass/style.sass"
+	],
+	"sourcesContent": [
+		"$color_one: #755973;\n$color_two: #123290;\nh1 {\n  color: $color_two; }\nspan {\n  color: $color_one; }\n\n"
+	],
+	"names": [],
+	"mappings": ";AAEA,AAAA,EAAE,CAAC;EACD,KAAK,EAFK,OAAO;CAEG;;;AACtB,AAAA,IAAI,CAAC;EACH,KAAK,EALK,OAAO;CAKG"
+}
