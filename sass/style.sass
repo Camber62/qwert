@@ -1,7 +1,43 @@
-$color_one: #755973
-$color_two: #123290
-h1
-  color: $color_two
-span
-  color: $color_one
+//$ peremrnni
+$bgDark:
+$bgLight:
+$fontDark:
+$side:
+$dir:
+$perc:
+$col:
 
+
+
+
+// MIxin
+
+
+@mixin reset
+  margin: 0
+  padding: 0
+  list-style: none
+
+@mixin colorDark
+   background-color: $bgDark
+   color: $bgLight
+
+@mixin colorLight
+  background-color: $bgLight
+  color: $fontDark
+
+
+
+//mixin to work with flex
+@mixin flex
+  display: flex
+  flex-direction: $dir
+  justify-content: $side
+
+
+//mixin to style the element border
+@mixin border
+  border: 2px solid $col
+  border-radius: $perc 0
+  border-bottom-width: 1px
+  border-left-width: 1px
