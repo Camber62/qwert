@@ -8,7 +8,7 @@ $indentV: 1vh;
 @mixin reset(){
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style: none;}
 
 
 
@@ -51,15 +51,12 @@ header{
           padding: $indentV;
           text-transform: capitalize;
 
-          @include border
-
-        (transparent, 20 %);
+          @include border (transparent, 20%);
           //зададим стили для ссылок при наведении
           //и активной ссылке
           &:hover, &.active {
-            .border
-
-          (@fontLight, 20 %);
+            @include border
+          ($fontLight, 20%);
           }
         }
       }
