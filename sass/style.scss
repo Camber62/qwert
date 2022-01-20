@@ -1,0 +1,68 @@
+$color_one: #833183;
+$color_two: #F5E2F5;
+$fontLight:#eee;
+$font: Franklin Gothic Medium;
+$indent: 4vw;
+$indentV: 1vh;
+
+@mixin reset(){
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+
+
+@mixin flex($dir, $side) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $side;
+}
+
+@mixin border($col, $perc) {
+  border: 2px solid $col;
+  border-radius: $perc 0;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+header{
+  @include flex(row,space-between);
+  padding:$indentV $indent;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  a
+  {
+    color: $fontLight;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+  nav {
+    ul {
+      @include reset();
+      li {
+        display: inline-block;
+        margin-left: $indentV;
+        //зададим стили ссылкам навигации
+        a {
+          display: block;
+          font-size: 100%;
+          padding: $indentV;
+          text-transform: capitalize;
+
+          @include border
+
+        (transparent, 20 %);
+          //зададим стили для ссылок при наведении
+          //и активной ссылке
+          &:hover, &.active {
+            .border
+
+          (@fontLight, 20 %);
+          }
+        }
+      }
+    }
+  }
+}

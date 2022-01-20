@@ -1,11 +1,16 @@
-/* line 3, ../DZ/Dz html css sass sess/sass/sass/style.sass */
-h1 {
-  color: #123290;
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vh 4vw;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 100
 }
 
-/* line 5, ../DZ/Dz html css sass sess/sass/sass/style.sass */
-span {
-  color: #755973;
+header a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 2rem
 }
-
-/*# sourceMappingURL=style.css.map */
