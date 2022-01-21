@@ -83,42 +83,48 @@ header {
 
 
 footer {
-  @include flex(column, space-between);
+  height:10%;
   background: $color_one;
+  padding: $indenth $indentw;
   text-align: center;
   color: white;
 
-  .footer_element {
-    margin: $indenth;
-    color: white;
+  ul {
+    @include reset();
+    //width: 20%;
+    @include flex(row, none);
 
-    .element {
+
+
+    li {
       @include border($fontLight, 20%);
-      width: 15%;
-
-      .element_border {
-        margin: 15px 0;
-
+      margin-left: $indentw;
+      .footer_element {
+        padding: 20px 0;
+        margin: 5px;
+        //width: 0%;
         img {
-          width: 25%;
+          width: 50%;
         }
 
         p {
           @include reset();
           margin: 13px 0 0 0;
           font-family: 'Segoe UI';
-          font-size: 3rem;
+          font-size: 6rem;
           font-weight: 800;
         }
+
         strong {
           font-style: italic;
-          font-size: 25px;
+          font-size: 3rem;
         }
       }
-
     }
   }
 }
+
+
 
 
 
