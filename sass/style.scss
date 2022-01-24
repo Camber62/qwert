@@ -16,6 +16,11 @@ body {
   list-style: none;
 }
 
+@mixin reset2($one,$two,$none) {
+  margin: $one;
+  padding: $two;
+  list-style: $none;
+}
 
 @mixin flex($dir, $side) {
   display: flex;
@@ -30,11 +35,6 @@ body {
   border-left-width: 1px;
 }
 
-//@mixin block() {
-//  background: $color_one;
-//  display: block;
-//  text-align: center;
-//}
 
 header {
   @include flex(row, space-between);
@@ -81,9 +81,41 @@ header {
   }
 }
 
+section {
+  font-size: xx-large;
+  color: $color_one;
+  font-weight: 800;
+
+  .home_text {
+    text-align:center;
+    .img{
+      p{
+        font-weight: bold;
+      }
+    }
+
+  }
+
+  .home {
+    @include flex(row, space-between);
+    padding: $indenth $indentw;
+
+    img {
+      width: 70%;
+      height: auto;
+    }
+    ol{
+      @include reset2(0,0,0);
+        list-style-position: inside;
+      li{
+      }
+    }
+  }
+}
+
 
 footer {
-  height:10%;
+  height: 10%;
   background: $color_one;
   padding: $indenth $indentw;
   text-align: center;
@@ -95,21 +127,22 @@ footer {
     @include flex(row, none);
 
 
-
     li {
       @include border($fontLight, 20%);
       margin-left: $indentw;
+
       .footer_element {
         padding: 20px 0;
         margin: 5px;
-        //width: 0%;
+        width: 10%;
+
         img {
           width: 50%;
         }
 
         p {
           @include reset();
-          margin: 13px 0 0 0;
+          margin: 20px 0 0 0;
           font-family: 'Segoe UI';
           font-size: 6rem;
           font-weight: 800;
