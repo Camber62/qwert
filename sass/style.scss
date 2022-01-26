@@ -6,9 +6,21 @@ $font: Franklin Gothic Medium;
 $indentw: 4vw;
 $indenth: 1vh;
 
-body {
+//services
+.body_services {
   background: $color_two;
 }
+
+.body_price {
+  background: $color_two;
+}
+
+//home
+.body_home {
+  background-image: url("../icons/bg_header.jpg");
+  background-repeat: no-repeat;
+}
+
 
 @mixin reset() {
   margin: 0;
@@ -81,83 +93,163 @@ header {
   }
 }
 
+//services
 section {
-  font-size: xx-large;
+  font-size: x-large;
   color: $color_one;
   font-weight: 800;
 
-  .home_text {
-    text-align:center;
-    .img{
-      p{
+  .services_text {
+    text-align: center;
+
+    .img {
+      p {
         font-weight: bold;
       }
     }
 
   }
 
-  .home {
+  .services {
     @include flex(row, space-between);
     padding: $indenth $indentw;
 
     img {
-      width: 70%;
+      width: 60%;
       height: auto;
     }
-    ol{
-      @include reset2(0,0,0);
-        list-style-position: inside;
-      li{
+
+    ol {
+      @include reset2(0, 0, 0);
+      list-style-position: inside;
+
+      li {
       }
     }
   }
 }
 
-
+//services
 footer {
-  height: 10%;
+
   background: $color_one;
   padding: $indenth $indentw;
   text-align: center;
   color: white;
 
-  ul {
-    @include reset();
+  h2 {
+    margin: 30px 0;
+  }
+
+  .footer_flex {
+    //@include reset();
     //width: 20%;
-    @include flex(row, none);
+    @include flex(column, none);
 
+    .footer_element_flex {
+      @include flex(row, space-evenly);
 
-    li {
-      @include border($fontLight, 20%);
-      margin-left: $indentw;
+      .footer_border {
+        @include border($fontLight, 20%);
 
-      .footer_element {
-        padding: 20px 0;
-        margin: 5px;
-        width: 10%;
+        .footer_element {
+          margin: 10px;
+          font-family: "sans-serif";
+          width: 15vw;
 
-        img {
-          width: 50%;
-        }
+          img {
+            width: 15vh;
+          }
 
-        p {
-          @include reset();
-          margin: 20px 0 0 0;
-          font-family: 'Segoe UI';
-          font-size: 6rem;
-          font-weight: 800;
-        }
-
-        strong {
-          font-style: italic;
-          font-size: 3rem;
+          p {
+            font-size: xxx-large;
+            font-weight: bold;
+            margin: 0;
+          }
         }
       }
+    }
+
+  }
+
+}
+
+//home
+.home {
+  color: $fontLight;
+  text-align: center;
+  font-family: $font;
+  margin-top: 30vh;
+
+  h1, h2, button {
+    margin-top: 5vh;
+    font-weight: 900;
+
+  }
+
+  h2 {
+    font-size: xx-large;
+  }
+
+  h1 {
+    font-size: xxx-large;
+  }
+
+  button {
+    @include border($fontLight, 20%);
+    background: $color_one;
+    color: $fontLight;
+    margin-top: 5px;
+    width: 7vw;
+    height: 7vh;
+
+    &:hover {
+      @include border($fontLight, 50%)
     }
   }
 }
 
 
+//price
+.price {
+  color: $color_one;
+  //font-weight: 900;
+  font-family: fantasy;
+  .price_card {
+    @include flex(row, none);
 
+    .card_border {
+      @include border($color_one, 20%);
+      width: 10vw;
 
+        .card {
+          text-align: center;
+          .name {
+            font-size: x-large;
+          }
+
+          hr {
+            width: 80%;
+            border: 1px solid $color_one;
+
+          }
+
+          button {
+            @include border($fontLight, 20%);
+            background: $color_one;
+            color: $fontLight;
+            margin-top: 1vh;
+            margin-bottom: 3vh;
+            width: 7vw;
+            height: 7vh;
+            font-weight: 800;
+
+            &:hover {
+              @include border($fontLight, 50%)
+            }
+          }
+        }
+      }
+    }
+  }
 
