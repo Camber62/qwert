@@ -224,12 +224,13 @@ footer {
 
     .card_border {
       @include border($color_one, 20%);
-      width: 10vw;
-      //margin-left: 3vw;
-
+      width: 15vw;
         .card {
           text-align: center;
           .name {
+            font-size: xx-large;
+          }
+          p{
             font-size: x-large;
           }
 
@@ -243,7 +244,7 @@ footer {
             @include border($fontLight, 20%);
             background: $color_one;
             color: $fontLight;
-            margin-top: 1vh;
+            margin-top: 5vh;
             margin-bottom: 3vh;
             width: 7vw;
             height: 7vh;
