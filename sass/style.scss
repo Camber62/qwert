@@ -213,14 +213,19 @@ footer {
 //price
 .price {
   color: $color_one;
-  //font-weight: 900;
-  font-family: fantasy;
+  text-align: center;
+  font-family: "Segoe UI Emoji";
+  font-weight: bold;
+     .name_price{
+       font-size: xxx-large;
+       }
   .price_card {
-    @include flex(row, none);
+    @include flex(row, space-evenly);
 
     .card_border {
       @include border($color_one, 20%);
       width: 10vw;
+      //margin-left: 3vw;
 
         .card {
           text-align: center;
