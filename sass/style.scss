@@ -21,6 +21,9 @@ $indenth: 1vh;
   background-repeat: no-repeat;
 }
 
+.body_contact {
+  background: $color_two;
+}
 
 @mixin reset() {
   margin: 0;
@@ -216,46 +219,116 @@ footer {
   text-align: center;
   font-family: "Segoe UI Emoji";
   font-weight: bold;
-     .name_price{
-       font-size: xxx-large;
-       }
+
+  .name_price {
+    font-size: xxx-large;
+  }
+
   .price_card {
     @include flex(row, space-evenly);
 
     .card_border {
       @include border($color_one, 20%);
       width: 15vw;
-        .card {
-          text-align: center;
-          .name {
-            font-size: xx-large;
-          }
-          p{
-            font-size: x-large;
-          }
 
-          hr {
-            width: 80%;
-            border: 1px solid $color_one;
+      .card {
+        text-align: center;
 
-          }
+        .name {
+          font-size: xx-large;
+        }
 
-          button {
-            @include border($fontLight, 20%);
-            background: $color_one;
-            color: $fontLight;
-            margin-top: 5vh;
-            margin-bottom: 3vh;
-            width: 7vw;
-            height: 7vh;
-            font-weight: 800;
+        p {
+          font-size: x-large;
+        }
 
-            &:hover {
-              @include border($fontLight, 50%)
-            }
+        hr {
+          width: 80%;
+          border: 1px solid $color_one;
+
+        }
+
+        button {
+          @include border($fontLight, 20%);
+          background: $color_one;
+          color: $fontLight;
+          margin-top: 5vh;
+          margin-bottom: 3vh;
+          width: 7vw;
+          height: 7vh;
+          font-weight: 800;
+
+          &:hover {
+            @include border($fontLight, 50%)
           }
         }
       }
     }
   }
+}
 
+
+//Contact
+.contact {
+  text-align: center;
+  color: $color_one;
+
+  .name_page {
+    font-size: xxx-large;
+    margin-top: 0;
+    font-family: "Segoe UI Emoji";
+    font-weight: bold;
+  }
+
+  form {
+    input, {
+      @include border($color_one, 20%);
+      background: $color_two;
+      width: 30vw;
+      height: 8vh;
+      margin-top: 5vh;
+
+      &::placeholder {
+        color: $color_one;
+        font-size: large;
+        text-indent:5px;
+        font-weight: bold;
+      }
+    }
+
+    textarea {
+      @include border($color_one, 20%);
+      background: $color_two;
+      width: 30vw;
+      height: 20vh;
+      margin-top: 5vh;
+
+      &::placeholder {
+        text-indent: 5px;
+        line-height:90px;
+        color: $color_one;
+        font-size: x-large;
+        font-weight: bold;
+
+      }
+    }
+  }
+
+  button {
+    @include border($color_one, 20%);
+    background: $color_one;
+    color: white;
+    width: 8vw;
+    height: 5vh;
+    font-weight: bold;
+    font-size: medium;
+  }
+}
+
+
+.footer_contact{
+  color: white;
+  font-family: "Segoe UI Emoji";
+  font-weight: bold;
+  font-size:large;
+}
